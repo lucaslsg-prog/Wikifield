@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eb162beed05c275220847608a68ef9a1",
+    "content-hash": "2f5c65c029ce1d998c2ebd73bb70a031",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",

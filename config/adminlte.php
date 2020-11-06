@@ -238,24 +238,44 @@ return [
         // ],
         [
             'text'    => 'Smartphones',
-            'url' => 'restrito/smartphones',
+            'url' => '/restrito/smartphones',
             'icon'    => 'fas fa-mobile-alt',
             'admin' => false,
             'submenu' => [
                 [
                     'text' => 'Average Current',
-                    'url'  => '#',
+                    'url'  => '/restrito/averages',
                 ],
                 [
                     'text' => 'Features',
-                    'url'  => '#',
+                    'url'  => '/restrito/features',
                 ],
                 [
                     'text' => 'Remarks',
-                    'url'  => '#',
+                    'url'  => '/restrito/remarks',
                 ],
                 
             ],
+
+        ],
+
+        [
+            'url' => 'restrito/tablets',
+            'text' => 'Tablets',
+            'icon' => 'fas fa-tablet-alt',
+            'admin'=> false
+        ],
+        [
+            'url' => 'restrito/wearables',
+            'text' => 'Wearables',
+            'icon' => 'far fa-clock',
+            'admin'=> false
+        ],
+        [
+            'url' => 'restrito/users',
+            'text' => 'Users',
+            'icon' => 'fas fa-users',
+            'admin'=> true
         ],
         ['header' => 'labels'],
         [
