@@ -21,3 +21,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::prefix('restrito')->group(function () {
+    
+    Route::namespace('Restrito')->name('restrito.')->group(function () {
+        Route::resource('smartphones', 'SmartphoneController');
+        Route::resource('', '');
+
+        Route::get('lista-smartphones','AutorController@listaSmartphones')->name('lista.smartphones');
+    });
+
+}); 

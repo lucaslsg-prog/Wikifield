@@ -241,21 +241,21 @@ return [
             'url' => '/restrito/smartphones',
             'icon'    => 'fas fa-mobile-alt',
             'admin' => false,
-            'submenu' => [
-                [
-                    'text' => 'Average Current',
-                    'url'  => '/restrito/averages',
-                ],
-                [
-                    'text' => 'Features',
-                    'url'  => '/restrito/features',
-                ],
-                [
-                    'text' => 'Remarks',
-                    'url'  => '/restrito/remarks',
-                ],
+            // 'submenu' => [
+            //     [
+            //         'text' => 'Average Current',
+            //         'url'  => '/restrito/averages',
+            //     ],
+            //     [
+            //         'text' => 'Features',
+            //         'url'  => '/restrito/features',
+            //     ],
+            //     [
+            //         'text' => 'Remarks',
+            //         'url'  => '/restrito/remarks',
+            //     ],
                 
-            ],
+            //],
 
         ],
 

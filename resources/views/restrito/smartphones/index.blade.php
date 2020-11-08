@@ -1,12 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>teste index smartphone</h1>
-</body>
-</html>
+@extends('adminlte::page')
+
+@section('title', 'Registered Smartphones')
+
+@section('content_header')
+    <h1>Registered Smartphones</h1>
+@stop
+
+@section('content')
+    <div class="card card-primary">
+        <div class="card-body">
+            {!! $dataTable->table() !!}
+        </div>
+    </div>
+@stop
+
+@section('css')
+@stop
+
+@section('js')
+    {!! $dataTable->scripts() !!}
+
+    <script>
+        function excluir(rota) {
+            Swal.fire({
+                title: 'Atenção!',
+                text: "Deseja mesmo excluir?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sim',
+                cancelButtonText: 'Não'
+            }).then((result) => {
+                if (result.value === true) {
+                    axios.delete(rota)
+                        .then(function (res) {
+                            $('#' + Object.keys(window.LaravelDataTables)[0]).DataTable().ajax.reload()
+                            Swal.fire('Sucesso!', 'Apagado com sucesso', 'success')
+                        })
+                        .catch(function (err) {
+                            Swal.fire('Sucesso!', 'Ocorreu um erro ao apagar', 'success')
+                        })
+                    
+                }
+            })
+        }
+    </script>
+@stop
